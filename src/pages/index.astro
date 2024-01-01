@@ -1,5 +1,6 @@
 ---
 import Logo from "@/components/Logo.astro";
+import DropdownMenu from "@/components/ui/DropdownMenu";
 ---
 
 <html lang="en">
@@ -9,6 +10,12 @@ import Logo from "@/components/Logo.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Zys Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-zinc-950 text-zinc-50">
     <header class="fixed inset-x-0 top-6 w-full px-2">
@@ -18,38 +25,18 @@ import Logo from "@/components/Logo.astro";
         <nav class="flex items-center justify-between">
           <a href="/">
             <Logo class="h-auto w-16" />
+            <span class="sr-only">logo</span>
           </a>
-          <button
-            class="flex size-8 items-center justify-center rounded-md focus:outline-none focus:ring-2 focus:ring-lime-400"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-7"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-menu"
-              ><line x1="4" x2="20" y1="12" y2="12"></line><line
-                x1="4"
-                x2="20"
-                y1="6"
-                y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg
-            >
-          </button>
+          <DropdownMenu client:load />
         </nav>
       </div>
     </header>
     <main class="py-48">
-      <section class="mx-auto max-w-3xl px-2">
-        <h1>Nepangkeun</h1>
-        <p class="mt-6">
-          Zys Dev, aka <i>Ajis Maulana</i> here. Celestial Codecraft, A Space
-          Enthusiast Programmer.
+      <section class="mx-auto max-w-3xl px-6">
+        <h1 class="text-lg font-medium italic">Nepangkeun</h1>
+        <p class="mt-6 text-balance">
+          Zys Dev, aka <span class="text-zinc-400">Ajis Maulana</span> here.
+          Celestial Codecraft, A Space Enthusiast Programmer.
         </p>
         <blockquote class="mt-6 text-balance">
           "Where the lines of a programmer's code intertwine with the cosmic
@@ -60,3 +47,9 @@ import Logo from "@/components/Logo.astro";
     </main>
   </body>
 </html>
+
+<style is:global>
+  body {
+    font-family: "Inter", sans-serif;
+  }
+</style>
