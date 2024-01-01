@@ -19,7 +19,7 @@ export default function DropdownMenu() {
       >
         <Menu.Items
           as="div"
-          className="absolute right-0 top-12 mt-2 w-40 origin-top-right rounded-md bg-zinc-900 p-1 shadow-lg focus:outline-none focus:ring-2 focus:ring-lime-300"
+          className="absolute right-0 mt-8 w-40 origin-top-right rounded-md bg-zinc-900 p-1 shadow-lg focus:outline-none focus:ring-2 focus:ring-lime-300"
         >
           <Menu.Item
             as="a"
