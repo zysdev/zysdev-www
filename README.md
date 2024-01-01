@@ -1,3 +1,3 @@
-# Zys Dev - Webiste
+# Zys Dev - Website
 
 🚧 Under Construction
