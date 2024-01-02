@@ -1,6 +1,5 @@
 ---
-import Logo from "@/components/Logo.astro";
-import DropdownMenu from "@/components/ui/DropdownMenu";
+import Header from "@/components/Header.astro";
 ---
 
 <html lang="en">
@@ -18,19 +17,7 @@ import DropdownMenu from "@/components/ui/DropdownMenu";
     />
   </head>
   <body class="bg-zinc-950 text-zinc-50">
-    <header class="fixed inset-x-0 top-6 w-full px-2">
-      <div
-        class="mx-auto max-w-3xl rounded-3xl bg-zinc-800/25 px-6 py-4 shadow backdrop-blur"
-      >
-        <nav class="flex items-center justify-between">
-          <a href="/">
-            <Logo class="h-auto w-16" />
-            <span class="sr-only">logo</span>
-          </a>
-          <DropdownMenu client:load />
-        </nav>
-      </div>
-    </header>
+    <Header />
     <main class="py-48">
       <section class="mx-auto max-w-3xl px-6">
         <h1 class="text-lg font-medium italic">Nepangkeun</h1>
