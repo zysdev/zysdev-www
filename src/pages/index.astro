@@ -1,4 +1,6 @@
 ---
+import { AstroFont } from "astro-font";
+
 import Header from "@/components/Header.astro";
 ---
 
@@ -9,11 +11,32 @@ import Header from "@/components/Header.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Zys Dev</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content=" Zys Dev. Celestial Codecraft. A Space Enthusiast Programmer."
+    />
+    <AstroFont
+      config={[
+        {
+          name: "Inter",
+          src: [
+            {
+              style: "normal",
+              weight: "400",
+              path: "./public/fonts/Inter-Regular.woff2",
+            },
+            {
+              style: "medium",
+              weight: "500",
+              path: "./public/fonts/Inter-Medium.woff2",
+            },
+          ],
+          preload: true,
+          display: "swap",
+          selector: "body",
+          fallback: "sans-serif",
+        },
+      ]}
     />
   </head>
   <body class="bg-zinc-950 text-zinc-50">
@@ -34,9 +57,3 @@ import Header from "@/components/Header.astro";
     </main>
   </body>
 </html>
-
-<style is:global>
-  body {
-    font-family: "Inter", sans-serif;
-  }
-</style>

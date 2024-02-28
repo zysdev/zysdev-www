@@ -5,7 +5,10 @@ import { Menu as MenuButton } from "lucide-react";
 export default function DropdownMenu() {
   return (
     <Menu as="div" className="relative leading-none">
-      <Menu.Button className="inline-flex size-8 items-center justify-center rounded focus:outline-none focus:ring-2 focus:ring-lime-300">
+      <Menu.Button
+        id="menu-toggle"
+        className="inline-flex size-8 items-center justify-center rounded focus:outline-none focus:ring-2 focus:ring-lime-300"
+      >
         <MenuButton />
       </Menu.Button>
       <Transition
@@ -25,7 +28,7 @@ export default function DropdownMenu() {
             as="a"
             href="https://github.com/zysdev"
             target="_blank"
-            className="ui-active:bg-lime-300 ui-active:text-zinc-900 block rounded px-2 py-1 text-lg"
+            className="block rounded px-2 py-1 text-lg ui-active:bg-lime-300 ui-active:text-zinc-900"
           >
             Sources
           </Menu.Item>
